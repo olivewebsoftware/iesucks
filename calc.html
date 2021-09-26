@@ -1,0 +1,200 @@
+<html>
+   <head>
+      <title>Calculator</title>
+      <script>
+         //Displays the numbers (calculator display)
+         function dis(val)
+         {
+             document.getElementById("result").value+=val
+         }
+         //Lets javascript do the math and return the result
+         function solve()
+         {
+             let x = document.getElementById("result").value
+             let y = eval(x)
+             document.getElementById("result").value = y
+         }
+         //Clears display
+         function clr()
+         {
+             document.getElementById("result").value = ""
+         }
+      </script>
+      <!--OliveWeb CSS-->
+      <style>
+         #one {
+            border: none;
+            background-color: gray;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+            padding: 10px 20px;
+         }
+         #two {
+            border: none;
+            background-color: gray;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+            padding: 10px 20px;
+         }
+         #three {
+            border: none;
+            background-color: gray;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+            padding: 10px 20px;
+         }
+         #four {
+            border: none;
+            background-color: gray;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+            padding: 10px 20px;
+         }
+         #five {
+            border: none;
+            background-color: gray;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+            padding: 10px 20px;
+         }
+         #six {
+            border: none;
+            background-color: gray;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+            padding: 10px 20px;
+         }
+         #seven {
+            border: none;
+            background-color: gray;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+            padding: 10px 20px;
+         }
+         #eight {
+            border: none;
+            background-color: gray;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+            padding: 10px 20px;
+         }
+         #nine {
+            border: none;
+            background-color: gray;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+            padding: 10px 20px;
+         }
+         #zero {
+            border: none;
+            background-color: gray;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+            padding: 10px 20px;
+         }
+         #clear {
+            padding: 5px 20px;
+            font-size: x-large;
+            font-family: Arial, Helvetica, sans-serif;
+            border: none;
+            color: white;
+            background-color: gray;
+         }
+         #multiply {
+            padding: 10px 20px;
+            font-size: x-large;
+            font-family: Arial, Helvetica, sans-serif;
+            border: none;
+            color: white;
+            background-color: gray;
+         }
+        #equals {
+            padding: 10px 20px;
+            font-size: x-large;
+            font-family: Arial, Helvetica, sans-serif;
+            border: none;
+            color: white;
+            background-color: gray;
+        }
+        #divide {
+            padding: 10px 20px;
+            font-size: x-large;
+            font-family: Arial, Helvetica, sans-serif;
+            border: none;
+            color: white;
+            background-color: gray;
+        }
+        #add {
+            padding: 10px 20px;
+            font-size: x-large;
+            font-family: Arial, Helvetica, sans-serif;
+            border: none;
+            color: white;
+            background-color: gray;
+        }
+        #subtract {
+         padding: 10px 20px;
+            font-size: x-large;
+            font-family: Arial, Helvetica, sans-serif;
+            border: none;
+            color: white;
+            background-color: gray;
+        }
+        #decimal {
+            padding: 10px 20px;
+            font-size: x-large;
+            font-family: Arial, Helvetica, sans-serif;
+            border: none;
+            color: white;
+            background-color: gray;
+        }
+      </style>
+   </head>
+   <!--number table-->
+   <body>
+      <table border="0">
+         <tr>
+            <td colspan="3"><input placeholder="0" type="text" id="result"/></td>
+            <!-- clr() function will call clr to clear all value -->
+            <td><input id="clear" type="button" value="c" onclick="clr()"/> </td>
+         </tr>
+         <tr></tr>
+            <!-- create button and assign value to each button -->
+            <!-- dis("1") will call function dis to display value -->
+            <td><input id="one" type="button" value="1" onclick="dis('1')"/> </td>
+            <td><input id="two" type="button" value="2" onclick="dis('2')"/> </td>
+            <td><input id="three" type="button" value="3" onclick="dis('3')"/> </td>
+            <td><input id="four" type="button" value="/" onclick="dis('/')"/> </td>
+         </tr>
+         <tr>
+            <td><input id="four" type="button" value="4" onclick="dis('4')"/> </td>
+            <td><input id="five" type="button" value="5" onclick="dis('5')"/> </td>
+            <td><input id="six" type="button" value="6" onclick="dis('6')"/> </td>
+            <td><input id="subtract" type="button" value="-" onclick="dis('-')"/> </td>
+         </tr>
+         <tr>
+            <td><input id="seven" type="button" value="7" onclick="dis('7')"/> </td>
+            <td><input id="eight" type="button" value="8" onclick="dis('8')"/> </td>
+            <td><input id="nine" type="button" value="9" onclick="dis('9')"/> </td>
+            <td><input id="add" type="button" value="+" onclick="dis('+')"/> </td>
+         </tr>
+         <tr>
+            <td><input id="decimal" type="button" value="." onclick="dis('.')"/> </td>
+            <td><input id="zero" type="button" value="0" onclick="dis('0')"/> </td>
+            <!--does the math stuff-->
+            <td><input id="equals" type="button" value="=" onclick="solve()"/> </td>
+            <td><input id="multiply" type="button" value="*" onclick="dis('*')"/> </td>
+         </tr>
+      </table>
+   </body>
+</html>   
